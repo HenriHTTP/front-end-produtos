@@ -31,8 +31,10 @@ const InfoCard = ({id,name,value,describe}) => {
         <>
         <ProductResult key={id}>
 
+        
+
             <ImgProductContainer>
-                    {imageLoaded === false && <img src={PlaceholderImg} style={{ width:'100px',height: '100px',margin:'auto' }} alt="Placeholder" />} {/* Exibe a imagem de placeholder enquanto a imagem principal não carrega */}
+                    {imageLoaded === false && <img src={PlaceholderImg} style={{ width:'30px',height: '30px',margin:'auto' }} alt="Placeholder" />} {/* Exibe a imagem de placeholder enquanto a imagem principal não carrega */}
                     <ImgProduc
                         style={{ display: imageLoaded ? 'block' : 'none' }}
                         src={"https://dummyimage.com/450x450/fff/aaa"}

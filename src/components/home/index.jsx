@@ -58,7 +58,7 @@ function Home  () {
         {
             !response.length &&
             <LoadingHome> 
-              <img src={PlaceholderImg} style={{ width:'50px',height: '50px',margin:'auto' }} alt="Placeholder" />
+                 <img src={PlaceholderImg} style={{ width:'30px',height: '30px',margin:'auto' }} alt="Placeholder" />
              </LoadingHome> 
         }
 
