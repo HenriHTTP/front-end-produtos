@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react';
+import PlaceholderImg from './alt/Loading_icon.gif'
 
 // api
 import APi from '../../api/index';
 import Container from '../container';
-import { LoadingContainer, Loadmore } from '../global';
+import { LoadingContainer, LoadingHome, Loadmore } from '../global';
 
 import{AiOutlinePlusCircle} from 'react-icons/ai'
 
@@ -54,6 +55,15 @@ function Home  () {
     return (
         <>
 
+        {
+            !response.length &&
+            <LoadingHome> 
+              <img src={PlaceholderImg} style={{ width:'50px',height: '50px',margin:'auto' }} alt="Placeholder" />
+             </LoadingHome> 
+        }
+
+       
+
         <Container response={renderedItems}/>
          {hasMoreItems && 
          <LoadingContainer>
@@ -61,6 +71,7 @@ function Home  () {
          </LoadingContainer>
         
          }
+       
      
 
         </>

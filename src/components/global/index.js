@@ -235,7 +235,14 @@ export const Loadmore = styled.button`
     color: white;
     cursor: pointer;
     font-size: 2em;
-    color:gray
+    color:gray;
 `;
-
-
+ 
+export const LoadingHome = styled.div`
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-color: whitesmoke;
+`;

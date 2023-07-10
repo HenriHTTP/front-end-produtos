@@ -53,6 +53,8 @@ function Productid  () {
     return (
         <>
 
+        
+
         <Info response={response}/>
 
         </>
