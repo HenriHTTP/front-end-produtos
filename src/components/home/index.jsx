@@ -9,6 +9,8 @@ import { LoadingContainer, LoadingHome, Loadmore } from '../global';
 
 import{AiOutlinePlusCircle} from 'react-icons/ai'
 
+import LoaddingGift from '../loader';
+
 
 function Home  () {
 
@@ -55,16 +57,14 @@ function Home  () {
     return (
         <>
 
-        {
-            !response.length &&
-            <LoadingHome> 
-                 <img src={PlaceholderImg} style={{ width:'30px',height: '30px',margin:'auto' }} alt="Placeholder" />
-             </LoadingHome> 
-        }
 
+       <LoaddingGift data={response} />
+        
        
 
         <Container response={renderedItems}/>
+         
+         
          {hasMoreItems && 
          <LoadingContainer>
              <Loadmore onClick={handleShowMore}><AiOutlinePlusCircle/></Loadmore>

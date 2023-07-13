@@ -3,9 +3,8 @@ import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import{AiOutlinePlusCircle} from 'react-icons/ai'
-
-import PlaceholderImg from './alt/Loading_icon.gif'
-
+// components
+import LoaddingGift from '../loader';
 
 // api
 import APi from '../../api/index';
@@ -16,7 +15,6 @@ import Container from '../container';
 import { 
   LoadingContainer, 
   Loadmore,
-  LoadingHome
  } from '../global';
 
 
@@ -74,15 +72,12 @@ function Productname  () {
    
     return (
       <>
-       {
-            !response.length &&
-            <LoadingHome> 
-              <img src={PlaceholderImg} style={{ width:'30px',height: '30px',margin:'auto' }} alt="Placeholder" />
-             </LoadingHome> 
-        }
 
+      <LoaddingGift data={response}/>
+      
 
       <Container response={renderedItems}/>
+       
        {hasMoreItems && 
        <LoadingContainer>
            <Loadmore onClick={handleShowMore}><AiOutlinePlusCircle/></Loadmore>

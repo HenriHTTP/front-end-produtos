@@ -2,17 +2,12 @@ import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-//img
-import PlaceholderImg from './alt/Loading_icon.gif'
+//components
+import LoaddingGift from '../../loader';
 
 // api
 import APi from '../../../api/index';
 import Info from '../infos/index';
-
-//styleds
-import {
-  LoadingHome
-  } from '../../global';
 
 
 function Productid  () {
@@ -60,16 +55,7 @@ function Productid  () {
    
     return (
         <>
-
-      {
-            !response.length &&
-            <LoadingHome> 
-              <img src={PlaceholderImg} style={{ width:'30px',height: '30px',margin:'auto' }} alt="Placeholder" />
-             </LoadingHome> 
-        } 
-
-        
-
+        <LoaddingGift data={response}/>
         <Info response={response}/>
 
         </>
