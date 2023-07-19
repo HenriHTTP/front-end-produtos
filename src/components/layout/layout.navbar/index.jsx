@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 //comnponents
 
-import Seach from '../seach';
+import Seach from '../layout.seach';
 import {AiFillHome} from 'react-icons/ai'
 
 
@@ -15,7 +15,7 @@ import {
   Menulogo,
   Logo
 } 
-from '../global/index'
+from '../../../assets/style/global'
 
 
 export default function Navbar() {

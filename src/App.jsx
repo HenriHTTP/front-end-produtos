@@ -1,10 +1,10 @@
 import React from 'react';
 import './index.css';
-import Navbar from './components/navbar';
+import Navbar from './components/layout/layout.navbar';
 import {BrowserRouter as Router,Route,Routes}from "react-router-dom";
-import Productid from './components/products/product_id';
-import Productname from './components/Product_name';
-import Home from './components/home';
+import Productid from './pages/page.product.id';
+import Productname from './components/layout/layout.product.name';
+import Home from './pages/page.home';
 
 function App() {
   return (

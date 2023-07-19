@@ -3,11 +3,11 @@ import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 //components
-import LoaddingGift from '../../loader';
+import LoaddingGift from '../../components/utils/utils.loader';
 
 // api
-import APi from '../../../api/index';
-import Info from '../infos/index';
+import APi from '../../services/index';
+import Info from '../../components/layout/layout.decribe.product.id';
 
 
 function Productid  () {

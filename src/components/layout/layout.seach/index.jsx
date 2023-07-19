@@ -7,7 +7,7 @@ import {
     MenuSeach,
     MenuSeachButton
   } 
-  from '../global/index'
+  from '../../../assets/style/global/index'
 
 
 const Seach = ({handleseach,handleValue}) => {

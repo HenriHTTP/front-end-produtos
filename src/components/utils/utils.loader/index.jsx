@@ -1,10 +1,10 @@
 import React from 'react'
-import PlaceholderImg from './alt/Loading_icon.gif'
+import PlaceholderImg from '../../../assets/img/Loading_icon.gif'
 
 //styleds
 import {
     LoadingHome
-} from '../global';
+} from '../../../assets/style/global';
 
 
 const  LoaddingGift = ({data}) => {

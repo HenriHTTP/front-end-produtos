@@ -9,7 +9,7 @@ import {
     LinkButton,
     ResultImg,
 
-} from '../global/index'
+} from '../../../assets/style/global/index'
 
 import {BsFillCartPlusFill} from 'react-icons/bs'
 

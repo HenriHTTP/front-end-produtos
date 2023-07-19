@@ -1,15 +1,11 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react';
-import PlaceholderImg from './alt/Loading_icon.gif'
-
 // api
-import APi from '../../api/index';
-import Container from '../container';
-import { LoadingContainer, LoadingHome, Loadmore } from '../global';
-
+import APi from '../../services/index';
+import Container from "../../components/layout/layout.coitainer.results"
+import { LoadingContainer, Loadmore } from '../../assets/style/global';
 import{AiOutlinePlusCircle} from 'react-icons/ai'
-
-import LoaddingGift from '../loader';
+import LoaddingGift from '../../components/utils/utils.loader';
 
 
 function Home  () {
@@ -17,7 +13,8 @@ function Home  () {
     const [response, setResponse] = useState([])
     const [visibleItems, setVisibleItems] = useState(8); // Número de itens visíveis
 
-    useEffect(() => {   
+  
+    useEffect(() => {     // use effect
         HandleSeachAPI()
     }, [])
 
@@ -26,15 +23,13 @@ function Home  () {
     const HandleSeachAPI = async () => {
       
         try{ 
-        //require api
+        const response = await APi.get(`/product/select/random`)      //require api
+        
+        setResponse(response.data)
           
-        const response = await APi.get(`/product/select/random`)
+        console.log(response.data)
 
-          setResponse(response.data)
-          
-          console.log(response.data)
-
-          if(response.data.length === 0){
+        if(response.data.length === 0){
             alert('Nenhum produto encontrado')
             return
           }

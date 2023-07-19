@@ -4,18 +4,18 @@ import { useParams } from 'react-router-dom';
 
 import{AiOutlinePlusCircle} from 'react-icons/ai'
 // components
-import LoaddingGift from '../loader';
+import LoaddingGift from '../../utils/utils.loader';
 
 // api
-import APi from '../../api/index';
-import Container from '../container';
+import APi from '../../../services/index';
+import Container from "../layout.coitainer.results"
 
 //styleds
 
 import { 
   LoadingContainer, 
   Loadmore,
- } from '../global';
+ } from '../../../assets/style/global';
 
 
 function Productname  () {

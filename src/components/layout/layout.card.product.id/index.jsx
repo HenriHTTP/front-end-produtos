@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import { Link } from 'react-router-dom'
 
-import PlaceholderImg from './alt/Loading_icon.gif'
+import PlaceholderImg from '../../../assets/img/Loading_icon.gif'
 
 import {
     ProductResult,
@@ -15,7 +15,7 @@ import {
     ProductActions,
     ProductDescription,
     ProductDescriptionContainer,
-} from '../../global/index'
+} from '../../../assets/style/global'
 
 import {BsFillCartPlusFill} from 'react-icons/bs'
 

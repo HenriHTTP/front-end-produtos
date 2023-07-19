@@ -1,12 +1,12 @@
 import React from 'react'
-import InfoCard from '../info_card';
+import InfoCard from '../layout.card.product.id';
 
 
 
 import { 
     ProductContainer,
   } 
-  from '../../global/index'
+  from '../../../assets/style/global'
 
 
 function Info  ({response}) {

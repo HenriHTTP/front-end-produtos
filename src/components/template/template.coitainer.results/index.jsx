@@ -6,7 +6,7 @@ import Results from '../results';
 import { 
     ResultSeach
   } 
-  from '../global/index'
+  from '../../../assets/style/global/index'
 
 function Container  ({response}) {
 
